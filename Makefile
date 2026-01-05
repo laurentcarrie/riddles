@@ -2,4 +2,4 @@
 
 
 run :
-	( cd riddles && echo "" > logs/riddles.log && cargo fmt && cargo run --bin riddle-34 	)
+	( cd riddles && cargo fmt && cargo clippy && cargo build && echo "" > logs/riddles.log && cargo fmt && cargo run --bin riddle-34 	)
