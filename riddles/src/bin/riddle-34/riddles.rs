@@ -45,32 +45,6 @@ pub fn complement_guess(cg: &CurrentGuess, n: u32) -> CurrentGuess {
     ret
 }
 
-pub fn is_prime(n: u32) -> bool {
-    if n <= 1 {
-        return false;
-    }
-    for i in 2..=((n as f64).sqrt() as u32) {
-        if n % i == 0 {
-            return false;
-        }
-    }
-    true
-}
-
-pub fn primes_less_than_n(n: u32) -> Vec<u32> {
-    let mut primes = Vec::new();
-    let mut candidate = 2;
-
-    while candidate < n {
-        if is_prime(candidate) {
-            primes.push(candidate);
-        }
-        candidate += 1;
-    }
-
-    primes
-}
-
 pub fn sum_of_two_primes(n: u32) -> HashMap<u32, Vec<(u32, u32)>> {
     let mut sums: HashMap<u32, Vec<(u32, u32)>> = HashMap::new();
     for i in 2..n {
