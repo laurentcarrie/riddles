@@ -8,7 +8,7 @@ use riddles as R;
 fn main() {
     crate::logger::init_logger().unwrap();
     log::info!("Starting riddles application");
-    let n = 100;
+    let n = 60;
 
     let data1 = R::initial(n);
 
