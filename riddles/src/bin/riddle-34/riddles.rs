@@ -8,8 +8,8 @@ pub struct CurrentGuess {
 
 pub fn initial(n: u32) -> CurrentGuess {
     let mut ret: Vec<(u32, u32)> = Vec::new();
-    for i in 2..n {
-        for j in i..n {
+    for i in 2..n + 1 {
+        for j in i..n + 1 {
             ret.push((i, j));
         }
     }
